@@ -1,2 +1,2 @@
 # lxie27.github.io
-Personal Webiste
+Personal Website
