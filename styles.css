@@ -1,0 +1,164 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #121212; /* Dark background */
+    color: #e0e0e0; /* Light text color */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Ensure the body takes up the full viewport height */
+    scroll-behavior: smooth; /* Enable smooth scrolling */
+    opacity: 0; /* Start with the body hidden */
+    transition: opacity 2s ease-in-out; /* Slower and smoother fade-in effect */
+}
+
+body.fade-in {
+    opacity: 1; /* Fade in to full opacity */
+}
+
+.masthead {
+    background-color: #1a1a1a; /* Masthead background color */
+    color: #ffffff; /* Masthead text color */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh; /* Full viewport height */
+    position: relative; /* For positioning the chevron */
+}
+
+.masthead .container {
+    text-align: center;
+}
+
+.chevron {
+    position: absolute;
+    bottom: 20px; /* Adjust as needed */
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 2rem;
+    animation: bounce 2s infinite; /* Chevron bounce animation */
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateX(-50%) translateY(0);
+    }
+    40% {
+        transform: translateX(-50%) translateY(-10px);
+    }
+    60% {
+        transform: translateX(-50%) translateY(-5px);
+    }
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    background-color: #1f1f1f; /* Darker nav background */
+}
+
+nav ul li {
+    margin: 0 1em;
+}
+
+nav ul li a {
+    color: #e0e0e0;
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    color: #ffffff; /* Light text on hover */
+}
+
+section {
+    padding: 2em;
+    text-align: center;
+    background-color: #181818; /* Section background */
+    margin-bottom: 1em;
+    border-radius: 8px; /* Slight rounding for visual appeal */
+}
+
+.portfolio-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.portfolio-item {
+    margin: 2em;
+    background-color: #1f1f1f; /* Portfolio item background */
+    padding: 1em;
+    border-radius: 8px; /* Rounded corners for portfolio items */
+    width: 300px; /* Fixed width for portfolio items */
+}
+
+.portfolio-item img {
+    max-width: 100%;
+    height: auto;
+    border: 2px solid #333; /* Border to highlight images */
+    border-radius: 4px; /* Rounded corners for images */
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #1f1f1f; /* Form background */
+    padding: 1em;
+    border-radius: 8px; /* Rounded corners for form */
+    max-width: 600px; /* Max width for the form */
+    margin: 0 auto; /* Center the form */
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 1em;
+}
+
+form label {
+    margin-bottom: 0.5em; /* Space between label and input */
+    color: #e0e0e0; /* Label text color */
+}
+
+form input, form textarea, form button {
+    width: 100%;
+    background-color: #000000; /* Black background for text boxes */
+    color: #e0e0e0; /* Light text color for text boxes */
+    border: 1px solid #333; /* Border for form elements */
+    border-radius: 4px; /* Rounded corners for form elements */
+    padding: 0.5em;
+}
+
+form input::placeholder, form textarea::placeholder {
+    color: #757575; /* Placeholder text color */
+}
+
+form textarea {
+    height: 100px; /* Fixed height for the textarea */
+}
+
+form button {
+    background-color: #333; /* Button background */
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: auto; /* Button should not take full width */
+    align-self: center; /* Center the button */
+    padding: 0.5em 2em; /* Add padding to the button */
+}
+
+form button:hover {
+    background-color: #444; /* Button background on hover */
+}
+
+footer {
+    background-color: #1f1f1f; /* Footer background */
+    color: #e0e0e0;
+    text-align: center;
+    padding: 1em 0;
+}
