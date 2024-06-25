@@ -1,5 +1,5 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
     margin: 0;
     padding: 0;
     background-color: #121212; /* Dark background */
@@ -92,7 +92,7 @@ section {
     background-color: #1f1f1f; /* Portfolio item background */
     padding: 1em;
     border-radius: 8px; /* Rounded corners for portfolio items */
-    width: 300px; /* Fixed width for portfolio items */
+    width: 600px; /* Fixed width for portfolio items */
     transition: transform 0.3s ease, background-color 0.3s ease; /* Transition for hover effect */
     text-decoration: none; /* Remove underline from links */
     color: inherit; /* Inherit text color */
