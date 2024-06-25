@@ -93,6 +93,10 @@ section {
     padding: 1em;
     border-radius: 8px; /* Rounded corners for portfolio items */
     width: 300px; /* Fixed width for portfolio items */
+    transition: transform 0.3s ease, background-color 0.3s ease; /* Transition for hover effect */
+    text-decoration: none; /* Remove underline from links */
+    color: inherit; /* Inherit text color */
+    display: block; /* Ensure the whole item is clickable */
 }
 
 .portfolio-item img {
@@ -100,6 +104,41 @@ section {
     height: auto;
     border: 2px solid #333; /* Border to highlight images */
     border-radius: 4px; /* Rounded corners for images */
+}
+
+.portfolio-item:hover {
+    transform: scale(1.05); /* Slightly enlarge on hover */
+    background-color: #2a2a2a; /* Darken background on hover */
+}
+
+.highlight {
+    animation: highlightAnimation 1.5s infinite; /* Highlight animation */
+}
+
+.highlight:hover {
+    animation: highlightHoverAnimation 1.5s infinite; /* Continue animation on hover */
+}
+
+@keyframes highlightAnimation {
+    0%, 100% {
+        transform: translateY(0);
+        background-color: #1f1f1f;
+    }
+    50% {
+        transform: translateY(-10px);
+        background-color: #2a2a2a;
+    }
+}
+
+@keyframes highlightHoverAnimation {
+    0%, 100% {
+        transform: translateY(0) scale(1.05); /* Combine scale and translate */
+        background-color: #2a2a2a;
+    }
+    50% {
+        transform: translateY(-10px) scale(1.05); /* Combine scale and translate */
+        background-color: #2a2a2a;
+    }
 }
 
 form {
@@ -154,6 +193,13 @@ form button {
 
 form button:hover {
     background-color: #444; /* Button background on hover */
+}
+
+.portfolio-item-image video {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px; /* Rounded corners for video */
+    margin: 1em 0;
 }
 
 footer {

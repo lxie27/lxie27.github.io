@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fog of War - Portfolio Item</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body class="fade-in">
+    <header>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../index.html#portfolio">Portfolio</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="portfolio-item-details">
+        <div class="container">
+            <h1>Fog of War</h1>
+            <div class="portfolio-item-image">
+                <video controls>
+                    <source src="../assets/images/projects/fog-of-war-cropped.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+            <div class="portfolio-item-description">
+                <h2>Project Overview</h2>
+                <p>
+                    A pared-down version of this: <br/> 
+                    <a href="https://technology.riotgames.com/news/demolishing-wallhacks-valorants-fog-war" target="_blank">https://technology.riotgames.com/news/demolishing-wallhacks-valorants-fog-war</a> 
+                    <br/><br/> 
+                    <span style="color: rgb(0, 95, 139);">Blue</span> is controlled by the user. 
+                    Their client is connected to an omniscient server (hosted by myself!), which feeds back the position of 
+                    <span style="color: red;">Red</span> ONLY if <span style="color: red;">Red</span> is at least adjacent 
+                    to <span style="color: rgb(0, 95, 139);">Blue</span>'s "fog of war" (area obscured by terrain). This fog of war visibility 
+                    map is pre-compiled, where each square algorithmically determines the other squares it should be able to see.
+                    <br/><br/> 
+                    Rudimentary wallhacks are provided to demonstrate side-stepping <span style="color: rgb(0, 95, 139);">
+                    Blue</span>-client's knowledge of <span style="color: red;">Red</span>. Whenever the hacked-client 
+                    has <span style="color: red;">Red</span>'s position, it will attempt to display it, 
+                    regardless of the fog of war. However, because the server only sends <span style="color: red;">Red</span>'s 
+                    position when <span style="color: red;">Red</span> is on a <span style="color: rgb(0, 95, 139);">
+                    Blue</span>-visible square, the damage of the wallhacks is limited to slightly beyond the fog of war.
+                    <br/><br/> 
+                    <a href="https://github.com/lxie27/FogOfWar">Repo here</a>
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Leslie Xie</p>
+    </footer>
+</body>
+</html>
